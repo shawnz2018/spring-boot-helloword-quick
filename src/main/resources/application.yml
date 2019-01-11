@@ -1,0 +1,28 @@
+
+#person:
+#  name: lihao
+#  age: 12
+#  map: {key1: val1,key2: val2}
+#  list:
+#    - error
+#    - helo
+#    - 1312
+#
+
+#yml文件支持文档块写法，文档块由“---”相隔
+server:
+  port: 8081
+#profiles定义文档块名称,active 定义激活那个文档块
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8082
+spring:
+  profiles: prod
+---
+server:
+     port: 8083
+spring:
+  profiles: test
